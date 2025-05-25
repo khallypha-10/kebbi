@@ -1,0 +1,346 @@
+# Kebbi State Governor Website Translations
+# Copyright (C) 2024 Kebbi State Government
+# This file is distributed under the same license as the Kebbi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Kebbi Website 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-25 01:15+0300\n"
+"PO-Revision-Date: 2024-05-25 15:30+0100\n"
+"Last-Translator: Translation Team <translations@kaurangwandu.com>\n"
+"Language-Team: Hausa <ha@kaurangwandu.com>\n"
+"Language: ha\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\kebbi\settings.py:140
+msgid "English"
+msgstr "Turanci"
+
+#: .\kebbi\settings.py:141
+msgid "Hausa"
+msgstr "Hausa"
+
+#: .\project\models.py:7
+msgid "Title"
+msgstr "Take"
+
+#: .\project\models.py:8
+msgid "Description"
+msgstr "Bayani"
+
+#: .\project\templates\about.html:9 .\project\templates\index.html:9
+msgid "Website Layout"
+msgstr "Tsarin Yanar Gizo"
+
+#: .\project\templates\about.html:12 .\project\templates\index.html:12
+msgid "Dr. Nasir Idris Kauran Gwandu Kebbi Governor Kebbi State Governor"
+msgstr "Dokta Nasir Idris Kauran Gwandu Gwamnan Kebbi Gwamnan Jihar Kebbi"
+
+#: .\project\templates\about.html:13 .\project\templates\index.html:13
+msgid ""
+"Official website of Dr. Nasir Idris, Kauran Gwandu, Governor of Kebbi State"
+msgstr ""
+"Shafin yanar gizon Dokta Nasir Idris, Kauran Gwandu, Gwamnan Jihar Kebbi"
+
+#: .\project\templates\about.html:19 .\project\templates\index.html:19
+msgid ""
+"A notable example of his unifying approach is the recent defection of three "
+"prominent People\\"
+msgstr ""
+"Misali na shiryuwarsa na hada kan jama'a shine sabon murabus din sanatoci "
+"uku na jam'iyyar PDP Adamu Aliero, Yahaya Abdullahi, da Garba Maidoki zuwa "
+"jam'iyyar APC. Canjin nasu ya samu sauƙi ta hanyar Gwamna Idris na tuntuɓar "
+"jama'a da kuma jajircewarsa na mulkin haɗa kan al'umma, wanda ke nuna sauyi "
+"ga haɗin kai a siyasance a jihar."
+
+#: .\project\templates\about.html:24 .\project\templates\index.html:23
+msgid "Dr. Nasir Idris"
+msgstr "Dokta Nasir Idris"
+
+#: .\project\templates\about.html:87 .\project\templates\index.html:70
+msgid "Type & hit enter..."
+msgstr "Buga ka danna shigar..."
+
+#: .\project\templates\about.html:112 .\project\templates\about.html:142
+#: .\project\templates\index.html:91
+msgid "Home"
+msgstr "Gida"
+
+#: .\project\templates\about.html:113 .\project\templates\about.html:143
+#: .\project\templates\about.html:319 .\project\templates\index.html:92
+#: .\project\templates\index.html:207 .\project\templates\index.html:434
+msgid "About"
+msgstr "Game da"
+
+#: .\project\templates\about.html:114 .\project\templates\about.html:320
+#: .\project\templates\index.html:93 .\project\templates\index.html:435
+msgid "Achievements"
+msgstr "Nasara"
+
+#: .\project\templates\about.html:140
+msgid "About Kauran Gwandu"
+msgstr "Game da Kauran Gwandu"
+
+#: .\project\templates\about.html:162
+#, fuzzy
+#| msgid "Dr. Nasir Idris"
+msgid "About Dr. Nasir"
+msgstr "Dokta Nasir Idris"
+
+#: .\project\templates\about.html:163
+msgid "Creative agency & their best solutions"
+msgstr "Hukumar kirkire-kirkire da mafi kyawun hanyoyinsu"
+
+#: .\project\templates\about.html:166
+#, fuzzy
+#| msgid ""
+#| "Governor Nasir Idris has positioned himself as a unifying figure in Kebbi "
+#| "State politics, emphasizing inclusive leadership and reconciliation. "
+#| "Since assuming office in May 2023..."
+msgid ""
+"Governor Nasir Idris has positioned himself as a unifying figure in Kebbi "
+"State politics, emphasizing inclusive leadership and reconciliation. Since "
+"assuming office in May 2023, he has actively engaged with various political "
+"stakeholders, including opposition figures, to foster a collaborative "
+"governance environment."
+msgstr ""
+"Gwamna Nasir Idris ya sanya kansa a matsayin mutum mai haɗa kan jama'a a "
+"siyasar Jihar Kebbi, yana mai da hankali kan shugabancin haɗa kan al'umma da "
+"sulhu. Tun lokacin da ya hau mulki a watan Mayu na 2023..."
+
+#: .\project\templates\about.html:180
+msgid "Project Complete"
+msgstr "Aikin da aka kammala"
+
+#: .\project\templates\about.html:188
+msgid "Happy Client"
+msgstr "Abokin ciniki mai farin ciki"
+
+#: .\project\templates\about.html:196
+msgid "Dealer Equipment"
+msgstr "Kayan aikin dila"
+
+#: .\project\templates\about.html:218
+msgid ""
+"A notable example of his unifying approach is the recent defection of three "
+"prominent People's Democratic Party (PDP) senators Adamu Aliero, Yahaya "
+"Abdullahi, and Garba Maidoki to the All Progressives Congress (APC). Their "
+"transition was facilitated by Governor Idris's outreach and commitment to "
+"inclusive governance, signaling a shift towards political cohesion in the "
+"state."
+msgstr ""
+
+#: .\project\templates\about.html:225
+msgid ""
+"Governor Idris's background as a union leader and educationist informs his "
+"emphasis on grassroots development and equitable resource distribution. His "
+"administration has prioritized sectors such as education, agriculture, and "
+"healthcare, aiming to deliver tangible benefits across Kebbi State. His "
+"efforts have garnered recognition from various quarters."
+msgstr ""
+
+#: .\project\templates\about.html:232
+msgid ""
+"The Sultan of Sokoto, Alhaji Muhammad Sa'ad Abubakar III, commended Governor "
+"Idris for uniting all former governors of Kebbi State in pursuit of common "
+"developmental goals - a feat described as unprecedented since Nigeria's "
+"return to democracy in 1999. By focusing on unity and development, Governor "
+"Nasir Idris is reshaping Kebbi State's political landscape, promoting "
+"collaboration over division, and setting a precedent for inclusive "
+"governance."
+msgstr ""
+
+#: .\project\templates\about.html:247
+msgid "Testimonials"
+msgstr ""
+
+#: .\project\templates\about.html:249
+msgid "A Testament to Leadership"
+msgstr "Shaida ga Jagoranci"
+
+#: .\project\templates\about.html:257
+msgid ""
+"In the history of Kebbi, no name echoes louder with progress and people-"
+"focused leadership than Comrade Dr. Nasir Idris, Kauran Gwandu — a leader "
+"whose vision speaks through action, not empty words. In just two years, "
+"Comrade Dr. Nasir Idris (Kauran Gwandu) has redefined leadership in Kebbi "
+"State, transforming it into a beacon of progress and development. Governor "
+"Nasir Idris has not only fulfilled his campaign promises but has also laid a "
+"solid foundation for sustainable development in Kebbi State. His visionary "
+"leadership continues to inspire confidence and set a benchmark for "
+"governance in Nigeria. Call him the builder. Call him the reformer. Call him "
+"Kaura. Whatever you call him, know this Governor Nasir Idris is the "
+"heartbeat of a rising Kebbi State. One vision. One purpose. One Kaura."
+msgstr ""
+
+#: .\project\templates\about.html:262
+msgid "Speaker, Kebbi State Youth Parliament"
+msgstr "Kakakin Majalisar Matasa ta Jihar Kebbi"
+
+#: .\project\templates\about.html:268
+msgid ""
+"Governor Nasir Idris' initiative demonstrates true leadership, empowering "
+"religious institutions, deepening devotion, and uplifting the lives of "
+"thousands. This project showcases Kebbi's commitment to spiritual and social "
+"progress under his leadership."
+msgstr ""
+
+#: .\project\templates\about.html:288 .\project\templates\index.html:238
+#: .\project\templates\index.html:282 .\project\templates\index.html:294
+#: .\project\templates\index.html:336 .\project\templates\index.html:404
+msgid "Kauran Gwandu"
+msgstr "Kauran Gwandu"
+
+#: .\project\templates\about.html:289 .\project\templates\index.html:405
+msgid "A man defined by excellence"
+msgstr "Mutumin da aka siffanta shi da kyakkyawan aiki"
+
+#: .\project\templates\about.html:299 .\project\templates\index.html:415
+msgid "Contact"
+msgstr "Tuntuɓar"
+
+#: .\project\templates\about.html:301 .\project\templates\index.html:417
+msgid "Address:"
+msgstr "Adireshin:"
+
+#: .\project\templates\about.html:301 .\project\templates\index.html:417
+msgid "Birnin-Kebbi, Kebbi."
+msgstr "Birnin Kebbi, Kebbi."
+
+#: .\project\templates\about.html:306 .\project\templates\index.html:422
+msgid "Created By"
+msgstr "Wanda Ya Ƙirƙira"
+
+#: .\project\templates\index.html:132
+msgid "Leadership with a Purpose"
+msgstr "Shugabanci Mai Manufa"
+
+#: .\project\templates\index.html:145
+msgid "Progress You Can See"
+msgstr "Ci Gaban da Kake Gani"
+
+#: .\project\templates\index.html:158
+msgid "People First, Always"
+msgstr "Jama'a Farko, Koyaushe"
+
+#: .\project\templates\index.html:194
+msgid "year"
+msgstr "shekara"
+
+#: .\project\templates\index.html:196
+msgid "Anniversary"
+msgstr "Bikin Cika Shekara"
+
+#: .\project\templates\index.html:208
+msgid "Leadership For Kebbi State"
+msgstr "Shugabanci Ga Jihar Kebbi"
+
+#: .\project\templates\index.html:212
+msgid "Vision"
+msgstr "Hangen Nesa"
+
+#: .\project\templates\index.html:213
+msgid "Strategy"
+msgstr "Dabarun"
+
+#: .\project\templates\index.html:214
+msgid "Results"
+msgstr "Sakamako"
+
+#: .\project\templates\index.html:218
+msgid ""
+"To build a stronger, more united Kebbi State, where thriving businesses, "
+"world-class education, and sustainable communities create opportunities for "
+"every family, today and for generations to come."
+msgstr ""
+"Don gina Jihar Kebbi mai ƙarfi da haɗin kai, inda kasuwancin da ke bunƙasa, "
+"ilimi na duniya, da al'ummomin da za su iya ci gaba suka haifar da dama ga "
+"kowane iyali, a yau da kuma ga tsararraki masu zuwa."
+
+#: .\project\templates\index.html:221
+msgid ""
+"Through bold investments in infrastructure, education, and innovation-paired "
+"with fiscally responsible leadership, we will create jobs, empower "
+"communities, and secure a brighter future for all Kebbi State families."
+msgstr ""
+"Ta hanyar jajircewar saka hannun jari a cikin kayayyakin more rayuwa, ilimi, "
+"da kirkire-kirkire tare da shugabancin da ke da alhakin kuɗi, za mu ƙirƙiri "
+"ayyukan yi, mu ƙarfafa al'ummomi, mu tabbatar da makoma mai haske ga dukan "
+"iyalai na Jihar Kebbi."
+
+#: .\project\templates\index.html:224
+msgid ""
+"Under his leadership, Kebbi State has achieved record job growth, historic "
+"investments in education, infrastructure, and stronger communities "
+"delivering real results that move Kebbi State forward."
+msgstr ""
+"A ƙarƙashin shugabancinsa, Jihar Kebbi ta sami ci gaban aikin yi na tarihi, "
+"saka hannun jari na tarihi a ilimi, kayayyakin more rayuwa, da ƙarfafa "
+"al'ummomi waɗanda ke ba da sakamako na gaske waɗanda ke motsa Jihar Kebbi "
+"gaba."
+
+#: .\project\templates\index.html:240
+msgid "Take a look at some of his achievements"
+msgstr "Dubi wasu nasarorinsa"
+
+#: .\project\templates\index.html:252
+#, python-format
+msgid ""
+"\n"
+"            <h3 class=\"h5\">%(title|title)s</h3>\n"
+"            "
+msgstr ""
+
+#: .\project\templates\index.html:258
+msgid "Read More"
+msgstr "Kara Karantawa"
+
+#: .\project\templates\index.html:279
+msgid "Dr Nasir Idris"
+msgstr "Dokta Nasir Idris"
+
+#: .\project\templates\index.html:285
+msgid "Governor"
+msgstr "Gwamna"
+
+#: .\project\templates\index.html:288
+msgid "Executive"
+msgstr "Zartarwa"
+
+#: .\project\templates\index.html:291
+msgid "Kebbi State"
+msgstr "Jihar Kebbi"
+
+#: .\project\templates\index.html:297
+msgid "His Excellency"
+msgstr "Mai Girma"
+
+#: .\project\templates\index.html:315
+msgid "A Unifying Force"
+msgstr "Ƙarfin Haɗin Kai"
+
+#: .\project\templates\index.html:316
+msgid "A Unifying Force in Kebbi State Politics"
+msgstr "Ƙarfin Haɗin Kai a Siyasar Jihar Kebbi"
+
+#: .\project\templates\index.html:318
+msgid ""
+"Governor Nasir Idris has positioned himself as a unifying figure in Kebbi "
+"State politics, emphasizing inclusive leadership and reconciliation. Since "
+"assuming office in May 2023..."
+msgstr ""
+"Gwamna Nasir Idris ya sanya kansa a matsayin mutum mai haɗa kan jama'a a "
+"siyasar Jihar Kebbi, yana mai da hankali kan shugabancin haɗa kan al'umma da "
+"sulhu. Tun lokacin da ya hau mulki a watan Mayu na 2023..."
+
+#: .\project\templates\index.html:319
+msgid "More"
+msgstr "Ƙari"
+
+#: .\project\templates\index.html:337
+msgid "Against All Odds: He Defied Limits and Redefined Greatness"
+msgstr "Duk da Kalubale: Ya Ƙi Iyakoki kuma Ya Sake Ma'anar Girma"

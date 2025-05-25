@@ -1,0 +1,435 @@
+{% load static %}
+{% load i18n %}
+{% load lang_utils %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="{% trans 'Website Layout' %}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="{% trans 'Dr. Nasir Idris Kauran Gwandu Kebbi Governor Kebbi State Governor' %}" />
+    <meta name="description" content="{% trans 'Official website of Dr. Nasir Idris, Kauran Gwandu, Governor of Kebbi State' %}" />
+    <meta property="og:url" content="https://kaurangwandu.com">
+    <meta property="og:image" content="http://kaurangwandu.com/static/img/keb_logo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="450">
+    <meta property="og:title" content="Kauran Gwandu">
+    <meta property="og:description" content="{% trans 'A notable example of his unifying approach is the recent defection of three prominent People\'s Democratic Party (PDP) senators Adamu Aliero, Yahaya Abdullahi, and Garba Maidoki to the All Progressives Congress (APC). Their transition was facilitated by Governor Idris\'s outreach and commitment to inclusive governance, signaling a shift towards political cohesion in the state.' %}">    
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/keb_logo.jpg'%}">
+    
+    <title>{% trans 'Dr. Nasir Idris' %}</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/plugins.css' %}">
+    <link rel="stylesheet" href="{% static 'search/search.css' %}">
+    <link rel="stylesheet" href="{% static 'quform/css/base.css' %}">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+    
+    <!-- Language Switcher CSS -->
+    <style>
+        .language-switcher {
+            margin-left: 15px;
+            padding: 8px 0;
+        }
+        .language-switcher select {
+            background: transparent;
+            color: #000;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .menu_area-light .language-switcher select {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- PAGE LOADING -->
+    <div id="preloader"></div>
+
+    <!-- MAIN WRAPPER -->
+    <div class="main-wrapper">
+
+        <!-- HEADER -->
+        <header class="header-style1 menu_area-light">
+            <div class="navbar-default border-bottom border-color-light-white">
+                <!-- Top Search Bar -->
+                <div class="top-search bg-primary">
+                    <div class="container-fluid px-lg-1-6 px-xl-2-5 px-xxl-2-9">
+                        <form class="search-form" action="#" method="GET">
+                            <div class="input-group">
+                                <span class="input-group-addon cursor-pointer">
+                                    <button class="search-form_submit fas fa-search text-white" type="submit"></button>
+                                </span>
+                                <input type="text" class="search-form_input form-control" name="q" autocomplete="off" placeholder="{% trans 'Type & hit enter...' %}">
+                                <span class="input-group-addon close-search mt-1"><i class="fas fa-times"></i></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Main Navigation -->
+                <div class="container-fluid px-lg-1-6 px-xl-2-5 px-xxl-2-9">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-12">
+                            <div class="menu_area alt-font">
+                                <nav class="navbar navbar-expand-lg navbar-light p-0">
+                                    
+
+                                    <div class="navbar-toggler bg-primary"></div>
+
+                                    <ul class="navbar-nav ms-auto" id="nav" style="display: none;">
+                                        <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                                        <li><a href="{% url 'about' %}">{% trans "About" %}</a></li>
+                                        <li><a href="{% url 'achievements' %}">{% trans "Achievements" %}</a></li>
+                                        <li class="language-switcher">
+                                            <form action="{% url 'set_language' %}" method="post" id="language-form">
+                                                {% csrf_token %}
+                                                <input name="next" type="hidden" value="{{ request.get_full_path|remove_lang }}">
+                                                <select name="language" class="language-selector">
+                                                    <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
+                                                    <option value="ha" {% if LANGUAGE_CODE == 'ha' %}selected{% endif %}>Hausa</option>
+                                                </select>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- BANNER SLIDER -->
+        <section class="full-screen top-position1 p-0">
+            <div class="slider-fade01 owl-carousel owl-theme w-100 min-vh-100">
+                <!-- Slide 1 -->
+                <div class="item bg-img cover-background left-overlay-secondary" data-overlay-dark="85" data-background="{% static 'img/kebbi.jpg' %}">
+                    <div class="container d-flex flex-column">
+                        <div class="row align-items-center min-vh-100">
+                            <div class="col-md-11 col-lg-9 col-xl-8 col-xxl-7">
+                                <div class="mt-5 mt-sm-0">
+                                    <h1 class="ls-minus-2px display-1 font-weight-800 lh-1 mb-2-6 mb-lg-2-9 text-white animated fadeInUp">
+                                        {% trans "Leadership with a Purpose" %}
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="item bg-img cover-background left-overlay-secondary" data-overlay-dark="85" data-background="{% static 'img/kebbi2.jpg' %}">
+                    <div class="container d-flex flex-column">
+                        <div class="row align-items-center min-vh-100">
+                            <div class="col-md-11 col-lg-9 col-xl-8 col-xxl-7">
+                                <div class="mt-5 mt-sm-0">
+                                    <h1 class="ls-minus-2px display-1 font-weight-800 lh-1 mb-2-6 mb-lg-2-9 text-white animated fadeInUp">
+                                        {% trans "Progress You Can See" %}
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="item bg-img cover-background left-overlay-secondary" data-overlay-dark="85" data-background="{% static 'img/kebbi3.jpg' %}">
+                    <div class="container d-flex flex-column">
+                        <div class="row align-items-center min-vh-100">
+                            <div class="col-md-11 col-lg-9 col-xl-8 col-xxl-7">
+                                <div class="mt-5 mt-sm-0">
+                                    <h1 class="ls-minus-2px display-1 font-weight-800 lh-1 mb-2-6 mb-lg-2-9 text-white animated fadeInUp">
+                                        {% trans "People First, Always" %}
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about-style04 pb-20">
+            <div class="container">
+                <div class="row g-lg-3 mt-n8">
+                    <div class="col-lg-6 mt-8">
+                        <div class="position-relative about-left">
+                            <div class="row">
+                                <div class="col-sm-5 d-none d-sm-block wow fadeInDown" data-wow-delay="100ms">
+                                    <div class="bg-img cover-background border-radius-10 height-560px image-hover" data-background="{% static 'img/kebbi4.jpg' %}"></div>
+                                </div>
+                                <div class="col-sm-7 wow fadeInUp" data-wow-delay="200ms">
+                                    <div class="bg-img cover-background border-radius-10 height-560px image-hover" data-background="{% static 'img/kebbi5.png' %}"></div>
+                                </div>
+                            </div>
+                            <div class="exp-box wow fadeInUp" data-wow-delay="200ms">
+                                <div class="row g-0">
+                                    <div class="col-sm-4">
+                                        <div class="bg-img cover-background h-100" data-background="{% static 'img/keb_logo.jpg' %}"></div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="d-flex py-4 px-4">
+                                            <div class="flex-shrink-0 me-3">
+                                                <img src="{% static 'img/icons/icon-01.png' %}" alt="..." class="w-55px">
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <div class="font-weight-800 text-secondary display-27">
+                                                    <div class="odometer odometer-auto-theme" data-count="2">2</div> {% trans "year" %}
+                                                </div>
+                                                <span class="display-30">{% trans "Anniversary" %}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-8">
+                        <div class="about-right ps-lg-1-9 ps-xxl-10">
+                            <div class="section-title01 mb-2-9 wow fadeInUp" data-wow-delay="100ms">
+                                <span>{% trans "About" %}</span>
+                                <h2 class="mb-0 display-4 font-weight-800 lh-1 ls-minus-2px">{% trans "Leadership For Kebbi State" %}</h2>
+                            </div>
+                            <div class="horizontaltab tab-style01 wow fadeInUp" data-wow-delay="150ms">
+                                <ul class="resp-tabs-list hor_1">
+                                    <li>{% trans "Vision" %}</li>
+                                    <li>{% trans "Strategy" %}</li>
+                                    <li>{% trans "Results" %}</li>
+                                </ul>
+                                <div class="resp-tabs-container hor_1 p-0">
+                                    <div>
+                                        <p class="mb-1-9 display-28">{% trans "To build a stronger, more united Kebbi State, where thriving businesses, world-class education, and sustainable communities create opportunities for every family, today and for generations to come." %}</p>
+                                    </div>
+                                    <div>
+                                        <p class="mb-1-9 display-28">{% trans "Through bold investments in infrastructure, education, and innovation-paired with fiscally responsible leadership, we will create jobs, empower communities, and secure a brighter future for all Kebbi State families." %}</p>
+                                    </div>
+                                    <div>
+                                        <p class="mb-1-9 display-28">{% trans "Under his leadership, Kebbi State has achieved record job growth, historic investments in education, infrastructure, and stronger communities delivering real results that move Kebbi State forward." %}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACHIEVEMENTS SECTION -->
+        <section class="bg-secondary mx-xxl-1-9 border-radius-10">
+            <div class="container">
+                <div class="section-title01 mb-2-9 text-center wow fadeInUp" data-wow-delay="100ms">
+                    <span>{% trans "Kauran Gwandu" %}</span>
+                    <h2 class="mb-0 display-4 font-weight-800 lh-1 text-white w-md-70 w-lg-60 w-xl-50 mx-auto ls-minus-2px">
+                        {% trans "Take a look at some of his achievements" %}
+                    </h2>
+                </div>
+                
+                <div class="row mt-n5">
+                    {% for achievement in achievements %}
+                    <div class="col-md-6 col-xl-4 mt-5 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="card card-style05 border-0 border-radius-10 bg-transparent">
+                            <div class="image-hover">
+                                <img src="{{ achievement.image.url }}" alt="{% if request.LANGUAGE_CODE == 'ha' and achievement.title_ha %}{{ achievement.title_ha }}{% else %}{{ achievement.title_en }}{% endif %}" class="border-radius-10">
+                            </div>
+                            <div class="card-body mx-1-9 text-center bg-white mt-n5 border-radius-10 p-0 position-relative z-index-9">
+                                {% if request.LANGUAGE_CODE == 'ha' and achievement.title_ha %}
+                                    <h3 class="h5">{{ achievement.title_ha }}</h3>
+                                    <p class="w-80 mx-auto">{{ achievement.description_ha|truncatewords:20 }}</p>
+                                {% else %}
+                                    <h3 class="h5">{{ achievement.title_en }}</h3>
+                                    <p class="w-80 mx-auto">{{ achievement.description_en|truncatewords:20 }}</p>
+                                {% endif %}
+                                <div class="service-btn">
+                                    <a href="{% url 'achievement' achievement.slug %}" class="py-3 d-block">
+                                        {% trans "Read More" %}<i class="ti-arrow-top-right display-30 ps-4"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUEE SECTION -->
+        <div class="p-0 marquee-section">
+            <div class="marquee">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="main-marq">
+                                <div class="slide-har st1">
+                                    <div class="box non-strok">
+                                        <div class="item">
+                                            <h4 class="d-flex align-items-center"><span>{% trans "Dr Nasir Idris" %}</span></h4>
+                                        </div>
+                                        <div class="item">
+                                            <h4 class="d-flex align-items-center"><span>{% trans "Kauran Gwandu" %}</span></h4>
+                                        </div>
+                                        <div class="item">
+                                            <h4 class="d-flex align-items-center"><span>{% trans "Governor" %}</span></h4>
+                                        </div>
+                                        <div class="item">
+                                            <h4 class="d-flex align-items-center"><span>{% trans "Executive" %}</span></h4>
+                                        </div>
+                                        <div class="item">
+                                            <h4 class="d-flex align-items-center"><span>{% trans "Kebbi State" %}</span></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- UNIFYING FORCE SECTION -->
+        <section class="why-choose-01">
+            <div class="container">
+                <div class="row mb-6 mb-lg-8 justify-content-between align-items-center mt-n1-9">
+                    <div class="col-lg-6 col-xxl-5 mt-1-9 order-2 order-lg-1">
+                        <div>
+                            <div class="section-title01 mb-1-9 mb-lg-2-9 wow fadeInUp" data-wow-delay="100ms">
+                                <span>{% trans "A Unifying Force" %}</span>
+                                <h2 class="mb-0 display-4 font-weight-800 lh-1 ls-minus-2px">{% trans "A Unifying Force in Kebbi State Politics" %}</h2>
+                            </div>
+                            <p class="mb-1-9 mb-lg-2-2 wow fadeInUp" data-wow-delay="150ms">{% trans "Governor Nasir Idris has positioned himself as a unifying figure in Kebbi State politics, emphasizing inclusive leadership and reconciliation. Since assuming office in May 2023..." %}</p>
+                            <a href="{% url 'about' %}" class="btn-style3 wow fadeInUp" data-wow-delay="200ms">{% trans "More" %}</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-1-9 order-1 order-lg-2 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="jarallax height-470px" data-overlay-dark="3" style="background-image: url('{% static 'img/kebbi4.jpg' %}');" data-jarallax data-speed="0.8" data-video-src="https://youtu.be/T662vKG2E_4?si=IoSSGEhomlopDykg"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION SECTION -->
+        <section class="bg-img cover-background mx-xxl-1-9 border-radius-10 py-md-20 secondary-overlay" data-overlay-dark="8" data-background="{% static 'img/kebbi6.jpg' %}">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-11 col-xxl-9">
+                        <div class="text-center">
+                            <div class="section-title01 mb-2-9 text-center wow fadeInUp" data-wow-delay="100ms">
+                                <span>{% trans "Kauran Gwandu" %}</span>
+                                <h4 class="mb-0 display-1 font-weight-100 lh-1 text-white ls-minus-2px">{% trans "Against All Odds: He Defied Limits and Redefined Greatness" %}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section class="pb-0 mx-xxl-1-9">
+            <div class="container-fluid p-md-0">
+                <div class="portfolio-carousel-one owl-carousel owl-theme">
+                    {% for i in "123456789" %}
+                    <div class="portfolio-style02 position-relative">
+                        <div class="img-hover border-radius-10">
+                            <img src="{% static 'img/kebbi'|add:i|add:'.jpg' %}" alt="Gallery Image {{ i }}" class="border-radius-10">
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-secondary">
+            <div class="container pt-2-9 pt-lg-7">
+                <div class="row mb-2-9">
+                    <div class="col-md-6 col-lg-4 mb-2-2 mb-lg-0">
+                        <div class="pe-md-5">
+                            <h3 class="h4 text-white mb-1-6 mb-md-1-9">{% trans "Kauran Gwandu" %}</h3>
+                            <p class="text-white mb-1-6">{% trans "A man defined by excellence" %}</p>
+                            <ul class="social-icon-style3 list-unstyled mb-0">
+                                <li><a href="https://www.facebook.com/share/1AHsPLzTPF/?mibextid=wwXIfr"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="https://x.com/nasiridriskg?s=21"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/dr.nasiridris?igsh=NWN6czRhMjl2cTFq"><i class="fa-brands fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-2-2 mb-lg-0">
+                        <div class="ps-md-1-9 ps-xxl-7 pe-lg-1-9 pe-xl-6">
+                            <h3 class="h4 text-white mb-1-6 mb-md-1-9">{% trans "Contact" %}</h3>
+                            <ul class="list-unstyled list-style09 mb-0">
+                                <li><span>{% trans "Address:" %} </span>{% trans "Birnin-Kebbi, Kebbi." %}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <h3 class="h4 text-white mb-1-6 mb-md-1-9">{% trans "Created By" %}</h3>
+                        <p class="text-white mb-1-6"><a href="https://gizodynamic.com">Gizo Dynamic</a></p>
+                        <p class="text-white mb-1-6"><a href="https://rimalconsulting.com">Rimal Consulting</a></p>
+                    </div>
+                </div>
+                <div class="row border-top border-color-light-white align-items-center pt-1-6 pb-1-9">
+                    <div class="col-md-4 order-2 order-md-1 text-center text-md-start">
+                        <div class="footer-logo text-center text-md-start mx-auto mx-lg-0"></div>
+                    </div>
+                    <div class="col-md-8 order-1 order-md-2">
+                        <div class="text-center text-md-end mb-4 mb-md-0">
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-inline-block mx-2"><a href="{% url 'about' %}" class="text-white text-primary-hover">{% trans "About" %}</a></li>
+                                <li class="d-inline-block mx-2"><a href="{% url 'achievements' %}" class="text-white text-primary-hover">{% trans "Achievements" %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- SCROLL TO TOP -->
+    <div class="scroll-top-percentage"><span id="scroll-value"></span></div>
+
+    <!-- JavaScript -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/nav-menu.js' %}"></script>
+    <script src="{% static 'search/search.js' %}"></script>
+    <script src="{% static 'js/easy.responsive.tabs.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.js' %}"></script>
+    <script src="{% static 'js/jarallax.min.js' %}"></script>
+    <script src="{% static 'js/jarallax-video.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/odometer.min.js' %}"></script>
+    <script src="{% static 'js/countdown.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/animated-headline.js' %}"></script>
+    <script src="{% static 'js/wow.js' %}"></script>
+    <script src="{% static 'js/smoothscroll.js' %}"></script>
+    <script src="{% static 'js/lightgallery-all.js' %}"></script>
+    <script src="{% static 'js/jquery.mousewheel.min.js' %}"></script>
+    <script src="{% static 'quform/js/plugins.js' %}"></script>
+    <script src="{% static 'quform/js/scripts.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <!-- Language Switcher Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Close mobile menu after language selection
+            document.querySelectorAll('.language-switcher select').forEach(function(select) {
+                select.addEventListener('change', function() {
+                    if (window.innerWidth < 992) {
+                        document.querySelector('.navbar-toggler').click();
+                    }
+                    this.form.submit();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

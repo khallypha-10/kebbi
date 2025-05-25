@@ -1,0 +1,362 @@
+{% load static i18n %}
+{% load lang_utils %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+
+<head>
+    <!-- metas -->
+    <meta charset="utf-8">
+    <meta name="author" content="{% trans 'Website Layout' %}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="{% trans 'Dr. Nasir Idris Kauran Gwandu Kebbi Governor Kebbi State Governor' %}" />
+    <meta name="description" content="{% trans 'Official website of Dr. Nasir Idris, Kauran Gwandu, Governor of Kebbi State' %}" />
+    <meta property="og:url" content="https://kaurangwandu.com">
+    <meta property="og:image" content="http://kaurangwandu.com/static/img/keb_logo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="450">
+    <meta property="og:title" content="Kauran Gwandu">
+    <meta property="og:description" content="{% trans 'A notable example of his unifying approach is the recent defection of three prominent People\'s Democratic Party (PDP) senators Adamu Aliero, Yahaya Abdullahi, and Garba Maidoki to the All Progressives Congress (APC). Their transition was facilitated by Governor Idris\'s outreach and commitment to inclusive governance, signaling a shift towards political cohesion in the state.' %}">    
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/keb_logo.jpg'%}">
+
+    <!-- title  -->
+    <title>{% trans "Dr. Nasir Idris" %}</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'img/keb_logo.jpg' %}">
+    <link rel="apple-touch-icon" href="{% static 'img/keb_logo.jpg' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/keb_logo.jpg' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/keb_logo.jpg' %}">
+
+    <!-- plugins -->
+    <link rel="stylesheet" href="{% static 'css/plugins.css' %}">
+
+    <!-- search css -->
+    <link rel="stylesheet" href="{% static 'search/search.css' %}">
+
+    <!-- quform css -->
+    <link rel="stylesheet" href="{% static 'quform/css/base.css' %}">
+
+    <!-- template core css -->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+
+    <!-- custom css -->
+    <link href="{% static 'css/custom.css--' %}" rel="stylesheet">
+
+    <!-- Language switcher styles -->
+    <style>
+        .navbar-nav li form {
+            padding: 8px 15px;
+        }
+        .navbar-nav li select {
+            background: transparent;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+            border-radius: 4px;
+            color: inherit;
+            cursor: pointer;
+        }
+        .menu_area-light .navbar-nav li select {
+            color: #000;
+        }
+        .navbar-nav li select:hover {
+            border-color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- PAGE LOADING -->
+    <div id="preloader"></div>
+
+    <!-- MAIN WRAPPER -->
+    <div class="main-wrapper">
+
+        <!-- HEADER -->
+        <header class="header-style1 menu_area-light">
+            <div class="navbar-default border-bottom border-color-light-white">
+                <!-- start top search -->
+                <div class="top-search bg-primary">
+                    <div class="container-fluid px-lg-1-6 px-xl-2-5 px-xxl-2-9">
+                        <form class="search-form" action="#" method="GET">
+                            <div class="input-group">
+                                <span class="input-group-addon cursor-pointer">
+                                    <button class="search-form_submit fas fa-search text-white" type="submit"></button>
+                                </span>
+                                <input type="text" class="search-form_input form-control" name="q" autocomplete="off" placeholder="{% trans 'Type & hit enter...' %}">
+                                <span class="input-group-addon close-search mt-1"><i class="fas fa-times"></i></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- end top search -->
+
+                <div class="container-fluid px-lg-1-6 px-xl-2-5 px-xxl-2-9">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-12">
+                            <div class="menu_area alt-font">
+                                <nav class="navbar navbar-expand-lg navbar-light p-0">
+                                    
+
+                                    <div class="navbar-toggler bg-primary"></div>
+
+                                    <!-- menu area -->
+                                    <ul class="navbar-nav ms-auto" id="nav" style="display: none;">
+                                        <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                                        <li><a href="{% url 'about' %}">{% trans "About" %}</a></li>
+                                        <li><a href="{% url 'achievements' %}">{% trans "Achievements" %}</a></li>
+                                        <li>
+                                            <form action="{% url 'set_language' %}" method="post" id="language-form">
+                                                {% csrf_token %}
+                                                <input name="next" type="hidden" value="{{ request.get_full_path|remove_lang }}">
+                                                <select name="language" class="language-selector">
+                                                    <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
+                                                    <option value="ha" {% if LANGUAGE_CODE == 'ha' %}selected{% endif %}>Hausa</option>
+                                                </select>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                    <!-- end menu area -->
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- PAGE TITLE -->
+        <section class="page-title-section bg-img cover-background top-position1 left-overlay-secondary" data-overlay-dark="85" data-background="{% static 'img/kebbi2.jpg' %}">
+            <div class="container">
+                <div class="row position-relative z-index-9">
+                    <div class="col-md-12">
+                        <h1>{% trans "About Kauran Gwandu" %}</h1>
+                        <ul>
+                            <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                            <li>{% trans "About" %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about-style02">
+            <div class="container">
+                <div class="row align-items-lg-center mb-1-9 mt-n1-9">
+                    <div class="col-md-4 mt-1-9 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="image-hover">
+                            <img src="{% static 'img/kebbi20.jpg' %}" alt="..." class="border-radius-10">
+                        </div>
+                    </div>
+                    <div class="col-md-8 mt-1-9">
+                        <div class="pe-lg-10 pe-xl-20 pe-xxl-24 top-right-content">
+                            <div class="section-title01 mb-1-9 pe-xl-6 pe-xxl-10 wow fadeInUp" data-wow-delay="100ms">
+                                <span>{% trans "About Dr. Nasir" %}</span>
+                                <h2 class="mb-0 display-4 font-weight-800 lh-1 ls-minus-2px">{% trans "Creative agency & their best solutions" %}</h2>
+                            </div>
+                            <p class="w-xl-70 mb-1-9 mb-lg-2-4 wow fadeInUp" data-wow-delay="150ms">
+                                {% trans "Governor Nasir Idris has positioned himself as a unifying figure in Kebbi State politics, emphasizing inclusive leadership and reconciliation. Since assuming office in May 2023, he has actively engaged with various political stakeholders, including opposition figures, to foster a collaborative governance environment." %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-n1-9">
+                    <div class="col-sm-6 col-lg-8 mt-1-9">
+                        <div class="bg-light p-1-9 border-radius-10">
+                            <div class="row mt-n4">
+                                <div class="col-lg-4 mt-4 wow fadeInUp" data-wow-delay="100ms">
+                                    <div class="border-lg-end p-xl-1-6">
+                                        <div class="text-secondary display-10 font-weight-800 lh-1">
+                                            <div class="odometer odometer-auto-theme" data-count="467">1</div>+
+                                        </div>
+                                        <span class="text-uppercase display-31 font-weight-600">{% trans "Project Complete" %}</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mt-4 wow fadeInUp" data-wow-delay="150ms">
+                                    <div class="border-lg-end p-xl-1-6">
+                                        <div class="text-secondary display-10 font-weight-800 lh-1">
+                                            <div class="odometer odometer-auto-theme" data-count="365">1</div>+
+                                        </div>
+                                        <span class="text-uppercase display-31 font-weight-600">{% trans "Happy Client" %}</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mt-4 wow fadeInUp" data-wow-delay="200ms">
+                                    <div class="p-xl-1-6">
+                                        <div class="text-secondary display-10 font-weight-800 lh-1">
+                                            <div class="odometer odometer-auto-theme" data-count="452">1</div>+
+                                        </div>
+                                        <span class="text-uppercase display-31 font-weight-600">{% trans "Dealer Equipment" %}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mt-1-9 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="bottom-right-content text-end image-hover">
+                            <img src="{% static 'img/kebbi19.jpg' %}" alt="..." class="border-radius-10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="process-style02 pt-0">
+            <div class="container">
+                <div class="row mt-n1-9">
+                    <div class="col-md-6 col-xl-4 mt-1-9 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="process-block">
+                            <p class="mb-0">
+                                {% trans "A notable example of his unifying approach is the recent defection of three prominent People's Democratic Party (PDP) senators Adamu Aliero, Yahaya Abdullahi, and Garba Maidoki to the All Progressives Congress (APC). Their transition was facilitated by Governor Idris's outreach and commitment to inclusive governance, signaling a shift towards political cohesion in the state." %}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4 mt-1-9 wow fadeInUp" data-wow-delay="150ms">
+                        <div class="process-block">
+                            <p class="mb-0">
+                                {% trans "Governor Idris's background as a union leader and educationist informs his emphasis on grassroots development and equitable resource distribution. His administration has prioritized sectors such as education, agriculture, and healthcare, aiming to deliver tangible benefits across Kebbi State. His efforts have garnered recognition from various quarters." %}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4 mt-1-9 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="process-block">
+                            <p class="mb-0">
+                                {% trans "The Sultan of Sokoto, Alhaji Muhammad Sa'ad Abubakar III, commended Governor Idris for uniting all former governors of Kebbi State in pursuit of common developmental goals - a feat described as unprecedented since Nigeria's return to democracy in 1999. By focusing on unity and development, Governor Nasir Idris is reshaping Kebbi State's political landscape, promoting collaboration over division, and setting a precedent for inclusive governance." %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXTRA SECTION -->
+        <section class="bg-img parallax map-h500" data-background="{% static 'img/kebbi21.jpg' %}"></section>
+
+        <!-- TESTIMONIALS -->
+        <section class="bg-secondary">
+            <div class="container">
+                <div class="section-title01 mb-1-9 mb-lg-8 text-center">
+                    <span>{% trans "Testimonials" %}</span>
+                    <h2 class="mb-0 display-4 font-weight-800 lh-1 text-white w-lg-70 w-xl-60 w-xxl-50 mx-auto ls-minus-2px">
+                        {% trans "A Testament to Leadership" %}
+                    </h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="testimonials-carousel-one owl-theme owl-carousel">
+                            <div class="text-center">
+                                <p class="lh-base mb-2-6 text-white display-25 display-lg-22">
+                                    {% trans "In the history of Kebbi, no name echoes louder with progress and people-focused leadership than Comrade Dr. Nasir Idris, Kauran Gwandu — a leader whose vision speaks through action, not empty words. In just two years, Comrade Dr. Nasir Idris (Kauran Gwandu) has redefined leadership in Kebbi State, transforming it into a beacon of progress and development. Governor Nasir Idris has not only fulfilled his campaign promises but has also laid a solid foundation for sustainable development in Kebbi State. His visionary leadership continues to inspire confidence and set a benchmark for governance in Nigeria. Call him the builder. Call him the reformer. Call him Kaura. Whatever you call him, know this Governor Nasir Idris is the heartbeat of a rising Kebbi State. One vision. One purpose. One Kaura." %}
+                                </p>
+                                <div class="d-inline-flex align-items-center text-start">
+                                    <div class="flex-grow-1">
+                                        <h4 class="mb-1 text-white">Mustapha Malami Idina</h4>
+                                        <span class="text-uppercase display-30 text-white opacity7">{% trans "Speaker, Kebbi State Youth Parliament" %}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <p class="lh-base mb-2-6 text-white display-25 display-lg-22">
+                                    {% trans "Governor Nasir Idris' initiative demonstrates true leadership, empowering religious institutions, deepening devotion, and uplifting the lives of thousands. This project showcases Kebbi's commitment to spiritual and social progress under his leadership." %}
+                                </p>
+                                <div class="d-inline-flex align-items-center text-start">
+                                    <div class="flex-grow-1">
+                                        <h4 class="mb-1 text-white">Aminu Shehu Bagudo.</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-secondary">
+            <div class="container pt-2-9 pt-lg-7">
+                <div class="row mb-2-9">
+                    <div class="col-md-6 col-lg-4 mb-2-2 mb-lg-0">
+                        <div class="pe-md-5">
+                            <h3 class="h4 text-white mb-1-6 mb-md-1-9">{% trans "Kauran Gwandu" %}</h3>
+                            <p class="text-white mb-1-6">{% trans "A man defined by excellence" %}</p>
+                            <ul class="social-icon-style3 list-unstyled mb-0">
+                                <li><a href="https://www.facebook.com/share/1AHsPLzTPF/?mibextid=wwXIfr"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="https://x.com/nasiridriskg?s=21"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/dr.nasiridris?igsh=NWN6czRhMjl2cTFq"><i class="fa-brands fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-2-2 mb-lg-0">
+                        <div class="ps-md-1-9 ps-xxl-7 pe-lg-1-9 pe-xl-6">
+                            <h3 class="h4 text-white mb-1-6 mb-md-1-9">{% trans "Contact" %}</h3>
+                            <ul class="list-unstyled list-style09 mb-0">
+                                <li><span>{% trans "Address:" %} </span>{% trans "Birnin-Kebbi, Kebbi." %}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <h3 class="h4 text-white mb-1-6 mb-md-1-9">{% trans "Created By" %}</h3>
+                        <p class="text-white mb-1-6"><a href="https://gizodynamic.com">Gizo Dynamic</a></p>
+                        <p class="text-white mb-1-6"><a href="https://rimalconsulting.com">Rimal Consulting</a></p>
+                    </div>
+                </div>
+                <div class="row border-top border-color-light-white align-items-center pt-1-6 pb-1-9">
+                    <div class="col-md-4 order-2 order-md-1 text-center text-md-start">
+                        <div class="footer-logo text-center text-md-start mx-auto mx-lg-0">
+                        </div>
+                    </div>
+                    <div class="col-md-8 order-1 order-md-2">
+                        <div class="text-center text-md-end mb-4 mb-md-0">
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-inline-block mx-2"><a href="{% url 'about' %}" class="text-white text-primary-hover">{% trans "About" %}</a></li>
+                                <li class="d-inline-block mx-2"><a href="{% url 'achievements' %}" class="text-white text-primary-hover">{% trans "Achievements" %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- SCROLL TO TOP -->
+    <div class="scroll-top-percentage"><span id="scroll-value"></span></div>
+
+    <!-- JavaScript files -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/nav-menu.js' %}"></script>
+    <script src="{% static 'search/search.js' %}"></script>
+    <script src="{% static 'js/easy.responsive.tabs.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.js' %}"></script>
+    <script src="{% static 'js/jarallax.min.js' %}"></script>
+    <script src="{% static 'js/jarallax-video.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/odometer.min.js' %}"></script>
+    <script src="{% static 'js/countdown.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/animated-headline.js' %}"></script>
+    <script src="{% static 'js/wow.js' %}"></script>
+    <script src="{% static 'js/smoothscroll.js' %}"></script>
+    <script src="{% static 'js/lightgallery-all.js' %}"></script>
+    <script src="{% static 'js/jquery.mousewheel.min.js' %}"></script>
+    <script src="{% static 'quform/js/plugins.js' %}"></script>
+    <script src="{% static 'quform/js/scripts.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <!-- Language switcher enhancement -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ensure form submission works even if JavaScript partially loads
+            document.querySelectorAll('select[name="language"]').forEach(function(select) {
+                select.addEventListener('change', function() {
+                    this.form.submit();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
