@@ -17,7 +17,7 @@ def about(request):
     return render(request, "about.html")
 
 def achievements(request):
-    achievements = Achievement.objects.all()
+    achievements = Achievement.objects.all().order_by('-id')
     context = {'achievements': achievements}
     return render(request, "achievements.html", context)
 
