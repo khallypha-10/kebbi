@@ -159,6 +159,9 @@ LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),
 ]
 
+TRANSLATABLE_MODEL_MODULES = ('project.models',)
+
+
 
 os.environ['PATH'] = r"C:\Program Files\gettext-iconv\bin;" + os.environ['PATH']
 
