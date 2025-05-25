@@ -5,8 +5,6 @@ from .models import Achievement
 
 @admin.register(Achievement)
 class AchievementAdmin(admin.ModelAdmin):
-    # ... (keep your existing fieldsets and list_display) ...
-
     def save_model(self, request, obj, form, change):
         # Auto-translate Hausa fields if empty
         if not obj.title_ha and obj.title_en:
@@ -15,14 +13,13 @@ class AchievementAdmin(admin.ModelAdmin):
                 obj.title_ha = translator.translate(obj.title_en, src='en', dest='ha').text
                 obj.description_ha = translator.translate(obj.description_en, src='en', dest='ha').text
             except Exception as e:
-                print(f"Translation error: {e}")  # Fail gracefully
+                print(f"Translation error: {e}")
 
-        # Generate slug with title + PK (if object exists)
-        if not obj.slug:
-            title = obj.title_en or obj.title_ha  # Fallback to Hausa if English is empty
-            if obj.pk:  # Only add PK if the object is already saved
-                obj.slug = f"{slugify(title)}-{obj.pk}"
-            else:
-                obj.slug = slugify(title)
-        
+        # First save to get a primary key if new object
+        is_new = obj.pk is None
         super().save_model(request, obj, form, change)
+
+        if is_new and not obj.slug:
+            title = obj.title_en or obj.title_ha
+            obj.slug = f"{slugify(title)}-{obj.pk}"
+            obj.save(update_fields=["slug"])

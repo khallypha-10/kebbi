@@ -15,7 +15,7 @@ class Achievement(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.title, self.pk)
+            self.slug = slugify(f"{self.title}-{self.pk}")
         super().save(*args, **kwargs)
 
     def __str__(self):
