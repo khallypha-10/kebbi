@@ -90,15 +90,10 @@ WSGI_APPLICATION = 'kebbi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': env('ENGINE'),
-        'NAME': env('NAME'),
-        'USER': env('USER'),
-        'PASSWORD': env('PASSWORD'),
-        'HOST': env('HOST'),
-        'PORT': env('PORT'),
+        'ENGINE': 'django.db.backends.sqlite3',  # Default for new Django projects
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
